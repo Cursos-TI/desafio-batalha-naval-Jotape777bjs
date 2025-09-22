@@ -1,40 +1,51 @@
 #include <stdio.h>
 
-// Desafio Batalha Naval - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
-// Siga os comentários para implementar cada parte do desafio.
 
 int main() {
-    // Nível Novato - Posicionamento dos Navios
-    // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
-    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
-    // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
+    char coluna[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};//vetor para as letras que indica as coluna
+    int linha[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};// vetor para a linha lateral de numeros que indica as linhas
+    int tabuleiro[10][10] = {0};//matriz do tabuleiro
 
-    // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
-    // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
-    // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
-    // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
+    for (int imp_coluna = 0; imp_coluna < 10; imp_coluna++)//repetir as letras da coluna
+    {
+        printf("  %c", coluna[imp_coluna]);
+        if (imp_coluna == 9)
+            {
+                printf("\n");
+            }
+    }
+    for (int imp_tabuleiro = 0; imp_tabuleiro < 10; imp_tabuleiro++){//repetição do primeiro indice do tabuleiro
+        printf("%d", linha[imp_tabuleiro]);//numerar as linhas do tabuleiro
+        for (int imp_tabuleiro2 = 0; imp_tabuleiro2 < 10; imp_tabuleiro2++){//repetição do segundo indice do tabuleiro
+            printf(" %d ", tabuleiro[imp_tabuleiro][imp_tabuleiro2]);
+            //navio horizontal
+            tabuleiro[4][5] = 3;
+            tabuleiro[4][6] = 3;
+            tabuleiro[4][7] = 3;
+            //navio na vertical
+            tabuleiro[2][2] = 3;
+            tabuleiro[3][2] = 3;
+            tabuleiro[4][2] = 3;
+            if (imp_tabuleiro2 == 9)//para imprimir corretamento o tabuleiro na tela, toda vez que a 9 ele salta para a proxima linha
+            {
+                printf("\n");
+            }
+             
+        }
+    }
 
-    // Nível Mestre - Habilidades Especiais com Matrizes
-    // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
-    // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
-    // Sugestão: Exiba o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas atingidas.
+    printf("\n");
 
-    // Exemplos de exibição das habilidades:
-    // Exemplo para habilidade em cone:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 1 1 1 1 1
     
-    // Exemplo para habilidade em octaedro:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 0 0 1 0 0
+    
+    
+    
+    
+    
 
-    // Exemplo para habilidade em cruz:
-    // 0 0 1 0 0
-    // 1 1 1 1 1
-    // 0 0 1 0 0
+
+
+
 
     return 0;
 }
