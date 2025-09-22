@@ -26,6 +26,14 @@ int main() {
             tabuleiro[2][2] = 3;
             tabuleiro[3][2] = 3;
             tabuleiro[4][2] = 3;
+            //navio diagonal 1
+            tabuleiro[0][5] = 3;
+            tabuleiro[1][4] = 3;
+            tabuleiro[2][3] = 3;
+            //navio diagonal 2
+            tabuleiro[6][4] = 3;
+            tabuleiro[7][3] = 3;
+            tabuleiro[8][2] = 3;
             if (imp_tabuleiro2 == 9)//para imprimir corretamento o tabuleiro na tela, toda vez que a 9 ele salta para a proxima linha
             {
                 printf("\n");
