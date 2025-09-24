@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h> // <-- abs
 
 int main() {
     char coluna[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};//vetor para as letras que indica as coluna
@@ -37,8 +37,18 @@ int main() {
             {
                 tabuleiro[imp_tabuleiro][imp_tabuleiro2] = 1;
             }
+            if (abs(imp_tabuleiro - 5) + abs(imp_tabuleiro2 - 7) <= 1){
+                tabuleiro[imp_tabuleiro][imp_tabuleiro2] = 5;
+            }
+            if (imp_tabuleiro ==  7 || imp_tabuleiro2 == 4 ){
+                if (imp_tabuleiro >= 5 && imp_tabuleiro2 >= 2 && imp_tabuleiro2 <= 6)
+                {
+                    tabuleiro[imp_tabuleiro][imp_tabuleiro2] = 8;
+                }
+                
+                
+            }
             
-
             printf(" %d ", tabuleiro[imp_tabuleiro][imp_tabuleiro2]);   
         }
 
