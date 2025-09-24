@@ -21,17 +21,21 @@ int main() {
     for (imp_tabuleiro = 0; imp_tabuleiro < 10; imp_tabuleiro++){//repetição do primeiro indice do tabuleiro
         printf("%d", linha[imp_tabuleiro]);//numerar as linhas do tabuleiro
         for (imp_tabuleiro2 = 0; imp_tabuleiro2 < 10; imp_tabuleiro2++){//repetição do segundo indice do tabuleiro
-            if (tabuleiro[4][imp_tabuleiro2] = (imp_tabuleiro2 >= 5 && imp_tabuleiro2 <= 7)){
-                tabuleiro[4][imp_tabuleiro2] = 3;
+            if (tabuleiro[5][imp_tabuleiro2] = (imp_tabuleiro2 >= 1 && imp_tabuleiro2 <= 3)){
+                tabuleiro[5][imp_tabuleiro2] = 3;
             }
-            if (tabuleiro[imp_tabuleiro][2] = (imp_tabuleiro >= 1 && imp_tabuleiro <= 3)){
-                tabuleiro[imp_tabuleiro][2] = 3;
+            if (tabuleiro[imp_tabuleiro][6] = (imp_tabuleiro >= 1 && imp_tabuleiro <= 3)){
+                tabuleiro[imp_tabuleiro][6] = 3;
             }
             if (imp_tabuleiro == imp_tabuleiro2 && imp_tabuleiro >= 7 && imp_tabuleiro2 <= 9){
                 tabuleiro[imp_tabuleiro][imp_tabuleiro2] = 3;
             }
             if (imp_tabuleiro + imp_tabuleiro2 == 9 && imp_tabuleiro <= 2 && imp_tabuleiro2 <= 9){
                 tabuleiro[imp_tabuleiro][imp_tabuleiro2] = 3;
+            }
+            if (imp_tabuleiro2 >= 2 - imp_tabuleiro && imp_tabuleiro2 <= 2 + imp_tabuleiro && imp_tabuleiro <= 2)
+            {
+                tabuleiro[imp_tabuleiro][imp_tabuleiro2] = 1;
             }
             
 
